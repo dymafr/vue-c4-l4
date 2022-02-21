@@ -1,6 +1,6 @@
 <template>
-  <h2>Prix total HT : {{ prixHT }}</h2>
-  <h2>Prix total TTC : {{ prixTTC }}</h2>
+  <h2>Prix total HT : {{ totalPrixHT }}€</h2>
+  <h2>Prix total TTC : {{ totalPrixTTC }}€</h2>
 </template>
 
 <script setup lang="ts">
@@ -12,8 +12,8 @@ const produit = reactive({
   nom: 'livre',
 });
 
-const prixHT = computed(() => produit.quantite * produit.prix);
-const prixTTC = computed(() => produit.quantite * produit.prix * 1.2);
+const totalPrixHT = computed(() => produit.quantite * produit.prix);
+const totalPrixTTC = computed(() => produit.quantite * produit.prix * 1.2);
 </script>
 
 <style></style>
